@@ -18,7 +18,6 @@
 				</el-menu>
 			</el-aside>
 			<el-main>
-				<Users></Users>
 				<router-view></router-view>
 			</el-main>
 		</el-container>
@@ -27,7 +26,6 @@
 
 <script>
 	import request from '../repuire/index.js'
-	import Users from '../components/user/users.vue'
 	// @ is an alias to /src
 	export default {
 		data() {
@@ -44,9 +42,7 @@
 				}
 			}
 		},
-		components:{
-			Users
-		},
+		
 		mounted() {
 			this.user = window.sessionStorage.getItem('user')
 			// console.log(window.sessionStorage.getItem('user'))
@@ -77,7 +73,9 @@
 	.home {
 		height: 100%;
 	}
-
+	.el-main{
+		margin-top: 60px;
+	}
 	.el-header {
 		position: fixed;
 		top: 0;
@@ -91,6 +89,9 @@
 	}
 	.el-aside{
 		margin-top: 60px;
+		position: fixed;
+		height: 100%;
+		z-index: 100;
 	}
 	.el-header>button {
 		width: 60px;
@@ -101,7 +102,9 @@
 		outline: none;
 		border: none;
 	}
-
+	.el-main{
+		margin-left: 200px;
+	}
 	.el-aside {
 		/* height: 100%; */
 		background-color: rgb(51, 55, 68);

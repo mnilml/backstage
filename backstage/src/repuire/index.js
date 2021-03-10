@@ -3,7 +3,6 @@ export default function(config) {
 	const instance = axios.create({
 		baseURL: '/api/',
 		timeout: 2000,
-		
 	});
 	instance.interceptors.request.use(function(config) {
 		// 在发送请求之前做些什么
