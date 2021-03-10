@@ -9,7 +9,7 @@ export default function(config) {
 		// 在发送请求之前做些什么
 		let token = sessionStorage.getItem('token')
 		if (token) {
-			config.headers['token'] = token;
+			config.headers.Authorization = token
 		}
 		return config;
 	}, function(error) {
