@@ -7,18 +7,19 @@
 		</el-header>
 		<el-container>
 			<el-aside width="200px" class="infinite-list" style="overflow:auto">
-				<el-menu>
+				<el-menu router>
 					<el-submenu v-for="(item,ind) in list" :index="String(item.order)">
 						<template slot="title"><i :class="icon[item.id]"></i>{{item.authName}}</template>
-						<el-menu-item v-for="it in item.children" >
-							<i class="el-icon-menu"></i>
-							<span slot="title" >{{it.authName}}</span>
+						<el-menu-item v-for="it in item.children" :index="'/index/'+it.path">
+								<i class="el-icon-menu"></i>
+								<span slot="title" >{{it.authName}}</span>
 						</el-menu-item>
 					</el-submenu>
 				</el-menu>
 			</el-aside>
 			<el-main>
-
+				<Users></Users>
+				<router-view></router-view>
 			</el-main>
 		</el-container>
 	</el-container>
@@ -26,6 +27,7 @@
 
 <script>
 	import request from '../repuire/index.js'
+	import Users from '../components/user/users.vue'
 	// @ is an alias to /src
 	export default {
 		data() {
@@ -41,6 +43,9 @@
 					145:"el-icon-suitcase"
 				}
 			}
+		},
+		components:{
+			Users
 		},
 		mounted() {
 			this.user = window.sessionStorage.getItem('user')
@@ -101,7 +106,12 @@
 		/* height: 100%; */
 		background-color: rgb(51, 55, 68);
 	}
-
+	.el-menu-item span{
+		color: #FFF9F3;
+	}
+	.el-menu-item:hover span{
+		color: #000;
+	}
 	.el-menu-vertical-demo {
 		background-color: rgb(51, 55, 68);
 	}
