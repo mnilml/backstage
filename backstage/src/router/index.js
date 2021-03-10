@@ -5,12 +5,22 @@ Vue.use(VueRouter)
 
 const routes = [{
 		path: '/',
-		redirect: '/index'
+		redirect: '/login'
 	},
 	{
 		path: '/index',
 		name: 'Index',
-		component: () => import( /* webpackChunkName: "about" */ '../views/index.vue')
+		component: () => import( /* webpackChunkName: "about" */ '../views/index.vue'),
+		children:[
+			{
+				path:'/',
+				redirect:'yh'
+			},
+			{
+				path:'yh',
+				component:()=>import('../components/index/yonghu.vue')
+			},
+		]
 	},
 	{
 		path: '/login',
