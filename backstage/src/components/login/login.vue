@@ -21,6 +21,7 @@
 </template>
 <script>
 	import request from '../../repuire/index.js'
+	
 	export default {
 		data() {
 			return {

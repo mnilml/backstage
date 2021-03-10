@@ -9,7 +9,9 @@
 			<el-aside width="200px" class="infinite-list" style="overflow:auto">
 				<el-menu :default-openeds="['1', '3']">
 					<el-submenu index="1">
-						<template slot="title"><i class="el-icon-message"></i>用户管理</template>
+						<template slot="title">
+							<i class="el-icon-menu"></i>用户管理
+							</template>
 					</el-submenu>
 					
 				</el-menu>
@@ -18,6 +20,7 @@
 				welcome
 			</el-main>
 		</el-container>
+			
 	</el-container>
 </template>
 
@@ -36,6 +39,13 @@
 			request({
 				url:'api/'
 			})
+			   request({
+      url: "/carousel",
+      method: "get",
+    }).then((res) => {
+      // console.log(res);
+      this.imglist = res.hcy;
+    });
 		},
 		methods:{
 			login(){
