@@ -1,9 +1,12 @@
 <template>
 	<div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	     内容
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 4c58a8396ec703a850a9177502276bb25b279d3b
 		111	qwertyukl
 =======
 		<div class="search">
@@ -59,6 +62,9 @@
 			layout="total, sizes, prev, pager, next, jumper" :total="data.total">
 		</el-pagination>
 >>>>>>> dcb40f279ea5da173d7c386eb1e7f72323073446
+<<<<<<< HEAD
+>>>>>>> 4c58a8396ec703a850a9177502276bb25b279d3b
+=======
 >>>>>>> 4c58a8396ec703a850a9177502276bb25b279d3b
 	</div>
 

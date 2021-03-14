@@ -139,7 +139,10 @@ body {
 <script>
 	import request from '../repuire/index.js'
 <<<<<<< HEAD
+<<<<<<< HEAD
 	// import Users from '../components/user/users.vue'
+=======
+>>>>>>> 4c58a8396ec703a850a9177502276bb25b279d3b
 =======
 >>>>>>> 4c58a8396ec703a850a9177502276bb25b279d3b
 	// @ is an alias to /src
@@ -159,9 +162,13 @@ body {
 			}
 		},
 <<<<<<< HEAD
+<<<<<<< HEAD
 		components:{
 			// Users
 		},
+=======
+		
+>>>>>>> 4c58a8396ec703a850a9177502276bb25b279d3b
 =======
 		
 >>>>>>> 4c58a8396ec703a850a9177502276bb25b279d3b
@@ -259,6 +266,7 @@ body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	.el-menu-demo {
 		position: absolute;
 		left: 200px;
@@ -283,15 +291,36 @@ body {
   background-color: rgb(51, 55, 68);
 }
 
+=======
+.el-menu-item {
+  background-color: rgb(51, 55, 68);
+}
+
+.el-menu-demo {
+  position: absolute;
+  left: 200px;
+}
+
+.el-menu {
+  background-color: rgb(51, 55, 68);
+}
+
+>>>>>>> 4c58a8396ec703a850a9177502276bb25b279d3b
 .el-submenu__title {
   color: #fff !important;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	.el-submenu__title:hover {
 		color: #000 !important;
 	}
  
+=======
+.el-submenu__title:hover {
+  color: #000 !important;
+}
+>>>>>>> 4c58a8396ec703a850a9177502276bb25b279d3b
 =======
 .el-submenu__title:hover {
   color: #000 !important;

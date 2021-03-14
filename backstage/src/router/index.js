@@ -61,11 +61,14 @@ const routes = [{
 			},
 			{
 <<<<<<< HEAD
+<<<<<<< HEAD
 				path:'orders',
 				name:'orders',
 				component:()=> import('../components/orders/orders.vue')
 			},
 =======
+=======
+>>>>>>> 4c58a8396ec703a850a9177502276bb25b279d3b
 				path: 'goods',
 				name: 'Goods',
 				component: () => import( /* webpackChunkName: "about" */ '../components/goods/goods.vue'),
