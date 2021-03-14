@@ -13,12 +13,14 @@ const routes = [{
 		component: () => import( /* webpackChunkName: "about" */ '../views/index.vue'),
 		children:[
 			{
-				path:'/',
-				redirect:'yh'
+				path: 'users',
+				name: 'Users',
+				component: () => import( /* webpackChunkName: "about" */ '../components/user/users.vue')
 			},
 			{
-				path:'yh',
-				component:()=>import('../components/index/yonghu.vue')
+				path:'orders',
+				name:'orders',
+				component:()=> import('../components/orders/orders.vue')
 			},
 		]
 	},
@@ -26,7 +28,8 @@ const routes = [{
 		path: '/login',
 		name: 'Login',
 		component: () => import( /* webpackChunkName: "about" */ '../components/login/login.vue')
-	}
+	},
+	
 ]
 
 const router = new VueRouter({
