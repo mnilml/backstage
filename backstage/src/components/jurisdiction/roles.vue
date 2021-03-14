@@ -320,6 +320,7 @@ export default {
       const arr2 = this.$refs.tree.getHalfCheckedKeys();
       const rids = [...arr1, ...arr2].join(",");
       console.log(rids);
+
       request({
         url: `roles/${this.roleId}/rights`,
         data: { rids },
@@ -328,6 +329,7 @@ export default {
         console.log(res);
         // id保存视图
         this.getRoles();
+        
         this.setRightDialogVisible = false;
       });
     },
@@ -347,7 +349,7 @@ export default {
       });
       // 获取所有三级节点的Id
       let arrtemp = [];
-      
+
       role.children.forEach((item1) => {
         arrtemp.push(item1.id);
         item1.children.forEach((item2) => {
