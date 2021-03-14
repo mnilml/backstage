@@ -26,7 +26,7 @@
 			</el-dialog>
 		</div>
 		<el-table :data="list.slice((currentPage-1)*PageSize,currentPage*PageSize)" stripe style="width: 100%">
-			<el-table-column prop="" label="#">
+			<el-table-column type="index" label="#">
 			</el-table-column>
 			<el-table-column prop="username" label="姓名" width="180">
 			</el-table-column>
@@ -41,9 +41,9 @@
 				</el-switch>
 			</el-table-column>
 			<el-table-column prop="" label="操作">
-				<el-row>
-					<el-button type="primary" icon="el-icon-edit" circle></el-button>
-					<el-button type="danger" icon="el-icon-delete" circle></el-button>
+				<el-row  slot-scope="scope">
+					<el-button type="primary" icon="el-icon-edit"  circle></el-button>
+					<el-button type="danger" icon="el-icon-delete" @click="delect(scope.row.id)" circle></el-button>
 					<el-button type="info" icon="el-icon-message" circle></el-button>
 				</el-row>
 			</el-table-column>
@@ -102,6 +102,15 @@
 			handleCurrentChange(val) {
 				console.log(`当前页: ${val}`);
 				this.currentPage = val
+			},
+			delect(id){
+				console.log(id)
+				request({
+					url: 'roles/500',
+					method: 'delete',
+				}).then(res => {
+					console.log(res)
+				})
 			}
 		},
 	}
@@ -118,4 +127,8 @@
 	.el-pagination {
 		float: left;
 	}
+	.el-form-item{
+		text-align: center;
+	}
+	
 </style>

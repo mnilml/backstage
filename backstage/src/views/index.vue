@@ -68,6 +68,7 @@
 	body {
 		width: 100%;
 		height: 100%;
+		background-color: rgb(234,237,241);
 	}
 
 	.home {
@@ -75,6 +76,7 @@
 	}
 	.el-main{
 		margin-top: 60px;
+		background-color: #fff;
 	}
 	.el-header {
 		position: fixed;
