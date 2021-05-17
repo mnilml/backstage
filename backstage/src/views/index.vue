@@ -21,7 +21,6 @@
 			<el-main>
 				<router-view></router-view>
 			</el-main>
-      <!-- 结束 -->
 		</el-container>
 	</el-container>
 </template>
