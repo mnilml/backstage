@@ -3,7 +3,7 @@
 		<el-header>
 			<span>电商后台管理系统</span>
 			<div v-if="user">{{user}}</div>
-			<button @click="login()" v-else>登录</button>
+			<button @click="login()" v-else>登 录</button>
 		</el-header>
 		<el-container>
 			<el-aside width="200px" class="infinite-list" style="overflow:auto">
